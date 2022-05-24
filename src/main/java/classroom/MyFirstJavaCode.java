@@ -1,90 +1,101 @@
 package classroom;
 
 public class MyFirstJavaCode {
+
+    /*
+    Access modifiers:
+    public, private, protected, default
+     */
+
     public static void main(String[] args) {
+        System.out.println("Hello World! My name is: Nikita!");
+        System.out.println("First argument is: " + args[0]);
+        System.out.println("Second argument is: " + args[1]);
 
-        // One line comment
+        // String[] args = {"Hello, "World};
 
-        /*
-        Multi line comment
-        Is the extremely good approach
-        How to write a lot of comments
-         */
+        //String[] twoWords = {"Hello", "World"};
 
-        // byte data type
+        // Primitive data type (numbers)
+
         byte floorCount = 7;
-        System.out.println("My house has " + floorCount + " floors");
-        System.out.printf("My house has %d floors\n", floorCount);
+        byte[] floors = {1, 2, 3, 4, 5, 6, 7};
 
-        // %d - numbers
-        // %s - text/string
-        // %b - boolean
+        // My house consist of 7 floors
+        // Concatenation
 
-        short salaryInEur = 1000;
-        System.out.println(salaryInEur);
-        System.out.println(1200);
+        System.out.println("My house consist of " + floorCount + " floors!");
+        System.out.printf("My house consist of %d floors!\n", floorCount);
 
-        System.out.printf("Average salary for Junior QA Engineer is: %d\n", salaryInEur);
+        // %s = for String (text)
+        // %d = for Number
+
+        short juniorTesterSalaryInEur = 1000;
+        short salariesInIt[] = {1000, 2000, 3000};
+        short emptySalariesArray[] = new short[4];
+
+        emptySalariesArray[0] = 1000;
+        emptySalariesArray[1] = 2000;
+        emptySalariesArray[2] = 3000;
+        emptySalariesArray[3] = 4000;
+        System.out.println(emptySalariesArray[2]);
+
+        System.out.println(juniorTesterSalaryInEur);
+        System.out.printf("Average salary for Junior QA Engineer is: %d\n", juniorTesterSalaryInEur);
 
         int chinaPopulation = 1449687399;
-        long currentWorldPopulation = 794609700;
-        System.out.printf("Current world population: %d people. In meanwhile china population: %d people\n", currentWorldPopulation, chinaPopulation);
+        System.out.printf("China Population %d people\n", chinaPopulation);
 
-        // Floating numbers
+        long currentWorldPopulation = 794609700;
+        System.out.printf("Current World population: %d\n", currentWorldPopulation);
+
+        // Floating numbers:
+
         float myCurrentWeight = 70.6f;
         System.out.println(myCurrentWeight);
 
         double gasPriceInEur = 1.83445d;
         System.out.println(gasPriceInEur);
 
-        // Primitive text (char)
-        char firstLettersOfMyName = 'N';
+        /*
+        Logical boolean
+        prefix : is, has
+        Example: isSummer, isWinter, hasItems, hasApples
+        Values: true / false (default: false)
+         */
 
-        // Non-primitive String
-        String myName = "Nikita";
-        System.out.println(myName);
+        boolean isSummer = true;
 
-        String mySentence = "Hello, my name is Nikita. I am 27 years old.";
-        String mySecondSentence = "I live in Riga";
-        System.out.println(mySentence);
-        System.out.println(mySentence + mySecondSentence);
-        System.out.println(mySentence + " " + mySecondSentence);
-        System.out.printf("%s %s\n", mySentence, mySecondSentence);
-
-        // boolean
-        // is / has
-        // isSummer , hasItems
-
-        boolean isSummer = false;
-        boolean isSpring = true;
-        System.out.println(isSpring);
-        System.out.println(isSummer);
-
-        if(isSummer) {
-            System.out.println("Yes, it is summer");
+        if (isSummer) {
+            System.out.printf("Now it is summer! And boolean value is: %b\n", isSummer);
         } else {
-            System.out.println("No, it is not summer");
+            System.out.printf("No, summer will be the next! And boolean value is: %b\n", isSummer);
         }
 
-        // Arithmetic operators + - / *
+        // Primitive: Text
+        char firstNameLetter = 'N';
+        System.out.println(firstNameLetter);
+
+        // Non-Primitive String
+        String myNameAndSurname = "Nikita Milka";
+        System.out.println(myNameAndSurname);
+
+        // Arithmetic Operators
+
+        System.out.println(7 + 7);
+        System.out.println("7 + 7");
+        System.out.println("7" + 7);
+        // Same here
+        System.out.println("7" + "7");
+
         int a = 10;
-        int b = 20;
+        int b = 5;
+        System.out.println(a + b);
+
         int c = a + b;
         System.out.println(c);
-        int x = b + 15;
-        System.out.println(x);
 
-        System.out.println(7 + 7); // 14
-        System.out.println("7" + 7); // 77
-        System.out.println("7" + "7"); // 77
-
-        boolean isAGreaterThanB = a > b;  // 10 > 20
-        boolean isASmallerThanB = a < b;  // 10 > 20
-
-        boolean isTrue = a != b;
-        System.out.println(isTrue);
-
-
-
+        boolean isAGreaterThanB = a > b;  // true
+        System.out.printf("Is a greater than b: %b", isAGreaterThanB);
     }
 }
